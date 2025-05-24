@@ -1,0 +1,6 @@
+@trustesseApp_HostAddress = http://localhost:5191
+
+GET {{trustesseApp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

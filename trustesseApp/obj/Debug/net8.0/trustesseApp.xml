@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>trustesseApp</name>
+    </assembly>
+    <members>
+        <member name="M:trustesseApp.Controllers.Accounts.AccountController.Register(trustesseApp.Models.UserRegVM)">
+            <summary>
+            Users Registering
+            </summary>
+            <param object="UserRegVM">The user object</param>
+            <returns>The response</returns>
+            <response code="200">Returns success</response>
+            <response code="400">If process fails</response>
+        </member>
+        <member name="M:trustesseApp.Controllers.Accounts.AccountController.ConfirmEmail(trustesseApp.Models.UserConfirmEmail)">
+            <summary>
+            Confirm Registration Account
+            </summary>
+            <param object="UserConfirmEmail">The object</param>
+            <returns>The response </returns>
+            <response code="200">Returns success message</response>
+            <response code="400">Returns failure message</response>
+        </member>
+        <member name="M:trustesseApp.Controllers.Accounts.AccountController.Login(trustesseApp.Models.UserLoginVM)">
+            <summary>
+            User Login
+            </summary>
+            <param object="UserLoginVM">The object</param>
+            <returns>The response </returns>
+            <response code="200">Returns success message</response>
+            <response code="400">Returns failure message</response>
+        </member>
+        <member name="M:trustesseApp.Controllers.Accounts.AccountController.Details(System.String)">
+            <summary>
+            User Login
+            </summary>
+            <param object="UserLoginVM">The object</param>
+            <returns>The response </returns>
+            <response code="200">Returns success message</response>
+            <response code="400">Returns failure message</response>
+            <response code="401">Unauthorized</response>
+            
+        </member>
+        <member name="M:trustesseApp.Controllers.Accounts.AccountController.GenerateToken(trustesseApp.Models.TokenGenerationRequest)">
+            <summary>
+            Generates a new 6-digit alphanumeric token
+            </summary>
+            <param name="request">Token generation request</param>
+            <returns>Generated token information</returns>
+            <response code="401">Unauthorized</response>
+            <response code="400">If the request is invalid or token generation fails</response>
+            <response code="200">Returns success message</response>
+            
+        </member>
+        <member name="M:trustesseApp.Controllers.Accounts.AccountController.ValidateToken(trustesseApp.Models.TokenValidationRequest)">
+            <summary>
+            Validates a token
+            </summary>
+            <param name="request">Token validation request</param>
+            <response code="401">Unauthorized</response>
+            <response code="200">Returns validation result</response>
+            <response code="400">Returns failure message</response>
+            <returns>Validation result</returns>
+        </member>
+        <member name="T:trustesseApp.Core.Infrastructure.Data.MyInits">
+            <inheritdoc />
+        </member>
+        <member name="M:trustesseApp.Core.Infrastructure.Data.MyInits.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:trustesseApp.Core.Infrastructure.Data.MyInits.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:trustesseApp.Core.Infrastructure.Data.MyInits.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="P:trustesseApp.Models.TokenGenerationRequest.LifetimeInHours">
+            <summary>
+            Optional lifetime in hours (max 72 hours/3 days)
+            </summary>
+            <example>24</example>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,25 @@
+using System;
+
+namespace trustesseApp.Core.Infrastructure.Helpers;
+
+
+
+public static class EmailTemplates
+{
+    public static string GetOtpEmailTemplate()
+    {
+        return $@"Hello,
+
+        Your One-Time Password (OTP) is: %OtpCode%
+
+        This code will expire in 5 minutes. Please do not share it with anyone.
+
+        If you didn't request this code, please ignore this email.
+
+        Best regards,
+        Your Application Team
+
+© %Year%  %COMPANY_NAME%. All rights reserved."
+;
+    }
+}
